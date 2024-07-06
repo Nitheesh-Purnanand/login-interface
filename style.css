@@ -1,189 +1,273 @@
 @import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200..900&display=swap");
-        @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
-        *{
-        margin: 0px;
-        padding: 0px;
-        }
-        .bubble-wrapper{
-            height: 100%;
-            width: 100%;
-            position: fixed;
-            bottom: 0px;
-            overflow: hidden;
-            background-color: rgb(191, 225, 255);
-        }
-        @keyframes wave {
-            from,to{
-                transform: translate(-50%,0%);
-            }
-            50%{
-                transform: translate(-50%,-20%);
-            }
-        }
-        .container{
-            height: 40vh;
-            width: 35vw;
-            position: absolute;
-            transform: translate(-50%,-50%);
-             background-color:rgba(109, 99, 254,0.3) ; 
-            border-radius: 20px;
-            border: 2px solid black;
-            top: 50%;
-            left: 50%;
-            box-shadow: 5px 5px ;
-            backdrop-filter: blur(10px);
-            /* visibility: hidden; */
-        }
-        .desk{
-            position: relative;
-            top: 29.5%;
-            left: -1.5%;
-            height: 600px;
-            width: 600px;
-            animation: move 1s ease-in-out 1;
-        }
-        
-        @keyframes move {
-            from{
-                transform: translate(-50%,0%);
-            }
-            60%{
-                transform: translate(4%,0%);
-            }
-            100%{
-                transform:translate(0%,0%) ;
-            }
-        }
-        .wrapper {
-            position: relative;
-            top: -120%;
-            left: 70%;
-            width: 40vw;
-            height: 74vh;
-            border-radius: 50%;
-            background-color: #6d63fe;
-            animation: move2 2s ease-in-out 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: #fff;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-        }
-        
-        .text {
-            position: relative;
-            top: 20%;
-            left: -12.5%;
-            font-size: 1.6em;
-            margin-bottom: 20px;
-            font-family:"Comic Neue";
-        }
-        
-        .create_button {
-            background-color: #fff;
-            border: none;
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 20%;
-            top: 24%;
-            left: -10%;  
-            border-radius: 20px;
-            padding: 10px 20px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        
-        .create_button a {
-            text-decoration: none;
-            color: #6d63fe;
-            font-weight: bold;
-        }
-        
-        .create_button a:hover {
-            background-color: #f0f0f0;
-        }
-        
-        @keyframes move2 {
-            from { 
-                transform: translate(50%, -50%);
-            }
-            80% {
-                transform: translate(-3%, 3%);
-            }
-            100%{
-                transform: translate(0%,0%);
-            }
-        }
-        
-        .sign_in{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            gap: 5%;
-        }
-        .sign_in_title{
-            font-size: 3rem;
-            position: relative;
-            top: -8%;
-            font-family: "Comic Neue";
-            font-style: normal;
-            font-weight: 700;
-        }
-        .sign_in_username{
-            outline: none;
-        }
-        
-        @media  screen and (max-width : 600px){
-            .container{
-                top: 45%;
-                height: 35vh;
-                width: 80vw;
-            }
-            .desk{
-                position: absolute;
-                top: 70%;
-                left: -55%;
-                height: 200px;
-                width: 600px;
-                animation: move 1s ease-in-out 1;
-            }
-            .wrapper{
-                position: relative;
-                top: -17%;
-                left: -10%;
-                width: 120vw;
-                height: 30vh;
-                border-radius: 50%;
-                background-color: #6d63fe;
-                animation: move3 1.15s ease-in 1;
-            }
-            .create_button{
-                left: -4%;
-                width: 40vw;
-                padding: 5px 5px ;
-            }
-            .text{
-                font-size: 1.2rem;
-                position: relative;
-                font-family: "Comic Neue";
-                top: 30%;
-                left: -5%;
-            }
-        @keyframes move3 {
-            from{
-                transform: translate(0%,-50%);
-            }
-            70%{
-                transform:translate(0%,10%)
-            }
-            to{
-                transform: translate(0%,0%);
-            }
-        }
-        }
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.bubble-wrapper {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  overflow: hidden;
+  background-color: rgb(191, 225, 255);
+}
+@keyframes wave {
+  from,
+  to {
+    transform: translate(-50%, 0%);
+  }
+  50% {
+    transform: translate(-50%, -20%);
+  }
+}
+.container {
+  height: 40vh;
+  width: 35vw;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background-color: rgba(109, 99, 254, 0.3);
+  border-radius: 20px;
+  border: 2px solid black;
+  top: 50%;
+  left: 50%;
+  box-shadow: 5px 5px;
+  backdrop-filter: blur(10px);
+  /* visibility: hidden; */
+}
+.desk {
+  position: relative;
+  top: 29.5%;
+  left: -1.5%;
+  height: 600px;
+  width: 600px;
+  animation: move 1s ease-in-out 1;
+}
+
+@keyframes move {
+  from {
+    transform: translate(-50%, 0%);
+  }
+  60% {
+    transform: translate(4%, 0%);
+  }
+  100% {
+    transform: translate(0%, 0%);
+  }
+}
+.wrapper {
+  position: relative;
+  top: -120%;
+  left: 70%;
+  width: 40vw;
+  height: 74vh;
+  border-radius: 50%;
+  background-color: #6d63fe;
+  animation: move2 2s ease-in-out 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.text {
+  position: relative;
+  top: 20%;
+  left: -12.5%;
+  font-size: 1.6em;
+  margin-bottom: 20px;
+  font-family: "Comic Neue";
+}
+
+.create_button {
+  background-color: #fff;
+  border: none;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  top: 24%;
+  left: -10%;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.create_button a {
+  text-decoration: none;
+  color: #6d63fe;
+  font-weight: bold;
+}
+
+.create_button a:hover {
+  background-color: #f0f0f0;
+}
+
+@keyframes move2 {
+  from {
+    transform: translate(50%, -50%);
+  }
+  80% {
+    transform: translate(-3%, 3%);
+  }
+  100% {
+    transform: translate(0%, 0%);
+  }
+}
+
+.sign_in {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 7%;
+}
+.sign_in_title {
+  font-size: 3rem;
+  position: relative;
+  top: -3%;
+  font-family: "Comic Neue";
+  font-style: normal;
+  font-weight: 700;
+}
+.sign_in_username {
+  outline: none;
+  width: 20vw;
+  height: 5vh;
+  background-color: rgba(191, 225, 255,08);
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  padding-left: 10px;
+  position: relative;
+  top: -4%;
+  box-shadow: 3px 3px rgba(0, 0, 0,0.2);
+  font-family: "Comic Neue";
+}
+.sign_in_password{
+    outline: none;
+    width: 20vw;
+    height: 5vh;
+    background-color: rgba(191, 225, 255,08);
+    font-size: 1rem;
+    box-shadow: 3px 3px rgba(0, 0, 0,0.2);
+    border: none;
+    border-radius: 10px;
+    padding-left: 10px;
+    position: relative;
+    top: -7%;
+    font-family: "Comic Neue";
+}
+.login{
+    background-color: #6d63fe;
+    font-size: 1.5rem;
+    border: none;
+    width: 7vw;
+    height: 5vh;
+    border-radius: 15px;
+    box-shadow:3px 3px rgba(0, 0, 0,0.2);
+    font-family: "Comic Neue";
+    font-weight: 550;
+    position: relative;
+    top: -5%;
+}
+.login:hover{color: rgba(0, 0, 0,0.5);
+    background-color: #887ffc;
+}
+.forgot_password{
+    font-size: 1rem;
+    font-family:"Comic Neue";
+    position: relative;
+    top: -7%;
+    color: rgba(109, 99, 254,2);
+    font-weight: 900;
+    text-decoration: none;
+}
+.forgot_password:hover{font-weight: 100;
+    color: rgba(109, 99, 254,1);
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    top: 45%;
+    height: 35vh;
+    width: 80vw;
+  }
+  .desk {
+    position: absolute;
+    top: 70%;
+    left: -55%;
+    height: 200px;
+    width: 600px;
+    animation: move 1s ease-in-out 1;
+  }
+  .wrapper {
+    position: relative;
+    top: -17%;
+    left: -10%;
+    width: 120vw;
+    height: 30vh;
+    border-radius: 50%;
+    background-color: #6d63fe;
+    animation: move3 1.15s ease-in 1;
+  }
+  .create_button {
+    left: -4%;
+    width: 40vw;
+    padding: 5px 5px;
+  }
+  .text {
+    font-size: 1.2rem;
+    position: relative;
+    font-family: "Comic Neue";
+    top: 30%;
+    left: -5%;
+  }
+  @keyframes move3 {
+    from {
+      transform: translate(0%, -50%);
+    }
+    70% {
+      transform: translate(0%, 10%);
+    }
+    to {
+      transform: translate(0%, 0%);
+    }
+  }
+  .sign_in_title{
+    position: relative;
+    top: -1%;
+  }
+  .sign_in_username{
+    width:58vw;
+    height: 4vh;
+    box-shadow: 2px 2px rgba(0, 0, 0,0.2);
+    position: relative;
+    top: -2%;
+  }
+  .sign_in_password{
+    width:58vw;
+    height: 4vh;
+    position: relative;
+    box-shadow: 2px 2px rgba(0, 0, 0,0.2);
+    top: -5%;
+  }
+  .login{
+    background-color: hwb(244 39% 0%);
+    font-size: 1.3rem;
+    border: none;
+    width: 22vw;
+    height: 4.5vh;
+    border-radius: 15px;
+    box-shadow:3px 3px rgba(0, 0, 0,0.2);
+    font-family: "Comic Neue";
+    position: relative;
+    top: -6%;
+}
+}

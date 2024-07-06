@@ -121,6 +121,25 @@ padding: 0px;
     }
 }
 
+.sign_in{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5%;
+}
+.sign_in_title{
+    font-size: 3rem;
+    position: relative;
+    top: -8%;
+    font-family: "Comic Neue";
+    font-style: normal;
+    font-weight: 700;
+}
+.sign_in_username{
+    outline: none;
+}
+
 @media  screen and (max-width : 600px){
     .container{
         top: 45%;

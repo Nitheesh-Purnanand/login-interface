@@ -12,16 +12,16 @@ padding: 0px;
     pointer-events: none;
     background-color: rgb(191, 225, 255);
 }
-.bubble{
+/* .bubble{
     height: max(300px,30vw);
     width: max(100px,30vw);
-    background-color: rgb(4, 238, 238);
+    background-color: #6d63fe;
     border-radius: 100%;
     position: absolute;
     left: 50%;
     top: 100%;
-    animation: wave 2s ease-in-out infinite;
-}
+    animation: wave 1s ease-in-out infinite;
+} */
 @keyframes wave {
     from,to{
         transform: translate(-50%,0%);
@@ -42,7 +42,7 @@ padding: 0px;
     left: 50%;
     box-shadow: 5px 5px ;
     backdrop-filter: blur(10px);
-
+    /* visibility: hidden; */
 }
 .desk{
     position: relative;
@@ -51,17 +51,56 @@ padding: 0px;
     width: 600px;
     animation: move 1s ease-in-out 1;
 }
+
 @keyframes move {
-    from,to{
-        transform: translate(0,0%);
+    from{
+        transform: translate(-50%,0%);
     }
     100%{
-        transform:translate(-50%,0%) ;
+        transform:translate(0%,0%) ;
+    }
+}
+.wrapper {
+    position: relative;
+    top: -120%;
+    left: 70%;
+    width: 40vw;
+    height: 74vh;
+    border-radius: 50%;
+    background-color: #6d63fe;
+    animation: move2 1s ease-in 1;
+}
+
+@keyframes move2 {
+    from { 
+        transform: translate(50%, -50%);
+    }
+    to {
+        transform: translate(0%, 0%);
     }
 }
 @media  screen and (max-width : 600px){
     .container{
+        top: 45%;
         height: 35vh;
         width: 80vw;
+    }
+    .desk{
+        position: absolute;
+        top: 70%;
+        left: -50%;
+        height: 200px;
+        width: 600px;
+        animation: move 1s ease-in-out 1;
+    }
+    .wrapper{
+        position: relative;
+        top: -120%;
+        left: 70%;
+        width: 40vw;
+        height: 74vh;
+        border-radius: 50%;
+        background-color: #6d63fe;
+        animation: move2 1s ease-in 1;
     }
 }

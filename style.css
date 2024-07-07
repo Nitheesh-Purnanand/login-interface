@@ -11,6 +11,7 @@
   bottom: 0px;
   overflow: hidden;
   background-color: rgb(191, 225, 255);
+  z-index: 3;
 }
 @keyframes wave {
   from,
@@ -33,6 +34,7 @@
   left: 50%;
   box-shadow: 5px 5px;
   backdrop-filter: blur(10px);
+  /* z-index: 2; */
   /* visibility: hidden; */
 }
 .desk {
@@ -55,6 +57,25 @@
     transform: translate(0%, 0%);
   }
 }
+.rocket{
+  position: relative;
+  top: 32%;
+  left: 80.5%;
+  height: 600px;
+  width: 600px;
+  animation: move4 1s ease-in-out 1; 
+}
+@keyframes move4 {
+  from {
+    transform: translate(0%,50%);
+  }
+  60% {
+    transform: translate(00%,-10%);
+  }
+  100% {
+    transform: translate(0%, 0%);
+  }
+}
 .wrapper {
   position: relative;
   top: -120%;
@@ -71,9 +92,51 @@
   text-align: center;
   color: #fff;
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);z-index: 2;
 }
-
+.wrapper_2{
+  position: relative;
+  animation: motion 2s ease-in-out 1 forwards;
+  z-index: 2;
+}
+.wrapper_3{
+  position: relative;
+  top: -120%;
+  left: -15%;
+  width: 40vw;
+  height: 74vh;
+  border-radius: 50%;
+  background-color: rgb(191, 225, 255);
+  animation: move3 2s ease-in-out 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  z-index: 3;
+}
+@keyframes move3 {
+  from {
+    transform: translate(-50%, -50%);
+  }
+  80% {
+    transform: translate(3%, 3%);
+  }
+  100% {
+    transform: translate(0%, 0%);
+}
+}
+@keyframes motion {
+  from{
+    transform: translate(0%,0%)scale(1);
+  }
+  to{
+    transform: translate(-50%,50%)scale(4);
+  }
+}
 .text {
   position: relative;
   top: 20%;
@@ -82,7 +145,16 @@
   margin-bottom: 20px;
   font-family: "Comic Neue";
 }
-
+.text2{
+  color: #6d63fe;
+  position: relative;
+  top: 20%;
+  left: 13.5%;
+  font-size: 1.6em;
+  margin-bottom: 20px;
+  font-family: "Comic Neue";
+  font-weight: 700;
+}
 .create_button {
   background-color: #fff;
   border: none;
@@ -98,7 +170,23 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-
+.login_button{
+  background-color: #fff;
+  border: none;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  top: 24%;
+  left: 10%;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: #6d63fe;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
 .create_button a {
   text-decoration: none;
   color: #6d63fe;
@@ -128,6 +216,15 @@
   flex-direction: column;
   gap: 7%;
 }
+.sign_up{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #887ffc;
+  gap: 7%;
+  z-index: 2;
+}
 .sign_in_title {
   font-size: 3rem;
   position: relative;
@@ -136,7 +233,29 @@
   font-style: normal;
   font-weight: 700;
 }
+.sign_up_title {
+  font-size: 3rem;
+  position: relative;
+  top: -3%;
+  font-family: "Comic Neue";
+  font-style: normal;
+  font-weight: 700;
+}
 .sign_in_username {
+  outline: none;
+  width: 20vw;
+  height: 5vh;
+  background-color: rgba(191, 225, 255,08);
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 10px;
+  padding-left: 10px;
+  position: relative;
+  top: -4%;
+  box-shadow: 3px 3px rgba(0, 0, 0,0.2);
+  font-family: "Comic Neue";
+}
+.sign_up_username{
   outline: none;
   width: 20vw;
   height: 5vh;
@@ -164,8 +283,35 @@
     top: -7%;
     font-family: "Comic Neue";
 }
+.sign_up_password{
+  outline: none;
+    width: 20vw;
+    height: 5vh;
+    background-color: rgba(191, 225, 255,08);
+    font-size: 1.2rem;
+    box-shadow: 3px 3px rgba(0, 0, 0,0.2);
+    border: none;
+    border-radius: 10px;
+    padding-left: 10px;
+    position: relative;
+    top: -7%;
+    font-family: "Comic Neue";
+}
 .login{
     background-color: #6d63fe;
+    font-size: 1.5rem;
+    border: none;
+    width: 7vw;
+    height: 5vh;
+    border-radius: 15px;
+    box-shadow:3px 3px rgba(0, 0, 0,0.2);
+    font-family: "Comic Neue";
+    font-weight: 550;
+    position: relative;
+    top: -5%;
+}
+.signUp{
+  background-color: #6d63fe;
     font-size: 1.5rem;
     border: none;
     width: 7vw;
@@ -269,6 +415,36 @@
     font-family: "Comic Neue";
     position: relative;
     top: -6%;
+}
+.sign_up_title{
+  position: relative;
+  top: -1%;
+}
+.sign_up_username{
+  width:58vw;
+  height: 4vh;
+  box-shadow: 2px 2px rgba(0, 0, 0,0.2);
+  position: relative;
+  top: -2%;
+}
+.sign_up_password{
+  width:58vw;
+  height: 4vh;
+  position: relative;
+  box-shadow: 2px 2px rgba(0, 0, 0,0.2);
+  top: -5%;
+}
+.signUp{
+  background-color: hwb(244 39% 0%);
+  font-size: 1.3rem;
+  border: none;
+  width: 22vw;
+  height: 4.5vh;
+  border-radius: 15px;
+  box-shadow:3px 3px rgba(0, 0, 0,0.2);
+  font-family: "Comic Neue";
+  position: relative;
+  top: -6%;
 }
 .forgot_password{
     font-size: 0.9rem;

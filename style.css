@@ -370,6 +370,16 @@
     color: rgba(109, 99, 254,1);
 }
 
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width: 600px) {
   .container {
     top: 45%;
@@ -384,7 +394,7 @@
     width: 600px;
     animation: move 1s ease-in-out 1;
   }
-  .wrapper {
+  .wrapper_1{
     position: relative;
     top: -17%;
     left: -10%;
@@ -393,6 +403,94 @@
     border-radius: 50%;
     background-color: #6d63fe;
     animation: move3 1.15s ease-in 1;
+  }
+  .wrapper_2{
+    position: relative;
+    animation: motion3 2s ease-in-out 1 forwards;
+    z-index: 2;
+  }
+  .wrapper_3 {
+    position: relative;
+    top: -17%;
+    left: -10%;
+    width: 120vw;
+    height: 30vh;
+    border-radius: 50%;
+    background-color: rgb(191, 225, 255);
+    animation: move4 2s ease-in-out 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  @keyframes move4 {
+    from{
+      transform: translate(0%,150%);
+    }
+    70% {
+      transform: translate(0%, -10%);
+    }
+    to {
+      transform: translate(0%, 0%);
+    }
+  }
+  @keyframes motion3 {
+    from{
+      transform: translate(0%,0%)scale(1);
+    }
+    to{
+      transform: translate(0%,50%)scale(5);
+  }}
+  /* .rocket{
+    position: relative;
+    top: -22%;
+    left: 20.5%;
+    height: 600px;
+    width: 600px;
+    animation: move4 1s ease-in-out 1;
+    
+  } */
+  @keyframes move4 {
+    from {
+      transform: translate(0%,50%);
+    }
+    60% {
+      transform: translate(00%,-10%);
+    }
+    100% {
+      transform: translate(0%, 0%);
+    }
+  }
+  .text2{
+    color: #6d63fe;
+    position: relative;
+    top: 0%;
+    left: -3.5%;
+    font-size: 1.6em;
+    margin-bottom: 20px;
+    font-family: "Comic Neue";
+    font-weight: 700;
+  }
+  .login_button{
+    background-color: #fff;
+    border: none;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    top: -50%;
+    left: -5%;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: #6d63fe;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
   }
   .create_button {
     left: -4%;
@@ -405,6 +503,14 @@
     font-family: "Comic Neue";
     top: 30%;
     left: -5%;
+  }
+  .text3{
+    position: relative;
+    top: 30%;
+    left: -5%;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    font-family: "Comic Neue";
   }
   @keyframes move3 {
     from {
@@ -479,5 +585,20 @@
 }
 .forgot_password{
     font-size: 0.9rem;
+}
+.wrapper_4 {
+  position: relative;
+  animation: motion2 2s ease-in-out 1 forwards;
+  z-index: 2;
+}
+
+@keyframes motion2 {
+  from {
+    background-color:rgb(191, 225, 255) ;
+    transform: translate(0%, 0%) scale(1);
+  }
+  to {    background-color: rgb(191, 225, 255);
+    transform: translate(50%, 0%) scale(6);
+  }
 }
 }

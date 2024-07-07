@@ -15,7 +15,7 @@ function create_button_click() {
     setTimeout(() => {
       wrapper.innerHTML = "";
       container.style.zIndex = "6";
-    }, 500);
+    }, 250);
     setTimeout(() => {
       container.classList.remove("sign_in");
       container.classList.add("sign_up");
@@ -56,8 +56,7 @@ function create_button_click() {
         container.style.zIndex = "8";
         setTimeout(() => {
           wrapper0.innerHTML = "";
-         
-        }, 500);
+        }, 250);
          setTimeout(() => {
           container.classList.remove("sign_up");
            container.classList.add("sign_in");
@@ -91,9 +90,9 @@ function create_button_click() {
            
            wrapper.appendChild(sign_up_button);
            create_button_click();
-      },2000);
+      },1500);
     });
-  },2000);
+  },1500);
 });
 }
 create_button_click();

@@ -427,7 +427,7 @@
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   }
-  @keyframes move4 {
+  /* @keyframes move4 {
     from{
       transform: translate(0%,150%);
     }
@@ -437,7 +437,7 @@
     to {
       transform: translate(0%, 0%);
     }
-  }
+  } */
   @keyframes motion3 {
     from{
       transform: translate(0%,0%)scale(1);

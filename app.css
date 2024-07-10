@@ -4,6 +4,14 @@
   margin: 0px;
   padding: 0px;
 }
+.preloader{
+  background: #000000 url(images/preloader.gif) no-repeat center center;
+  width: 100%;
+  background-size: 30%;
+  height: 100vh;
+  position: fixed;
+  z-index: 100;
+}
 .bubble-wrapper {
   height: 100%;
   width: 100%;

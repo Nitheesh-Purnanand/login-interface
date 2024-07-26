@@ -93,7 +93,7 @@ function create_button_click() {
       },1500);
     });
   },1500);
-});
+})
 }
 var loader = document.querySelector(".preloader");
 window.addEventListener("load",()=>{
